@@ -248,14 +248,16 @@
           <div class="mb-4">
             <label class="block text-sm font-semibold mb-2">Per Player</label>
             <input
+              id="player-cost"
               type="text"
               value="1000"
-              class="w-full p-2 text-black rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              class="w-full p-2 text-teal-400 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400"
             />
           </div>
 
           <!-- Calculate Button -->
           <button
+            id="calculate-btn"
             class="w-full bg-blue-500 py-2 rounded text-white font-semibold mb-4"
           >
             Calculate
@@ -266,16 +268,19 @@
             <label class="block text-sm font-semibold mb-2"
               >Player Expenses</label
             >
-            <span class="text-lg">$5000</span>
+            <span class="text-lg text-teal-400"
+              >$ <span id="player-expense">5000</span>
+            </span>
           </div>
 
           <!-- Manager -->
           <div class="mb-4">
             <label class="block text-sm font-semibold mb-2">Manager</label>
             <input
+              id="manager-cost"
               type="text"
               value="2000"
-              class="w-full p-2 text-black rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              class="w-full p-2 text-teal-400 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400"
             />
           </div>
 
@@ -283,14 +288,16 @@
           <div class="mb-4">
             <label class="block text-sm font-semibold mb-2">Coach</label>
             <input
+              id="coach-cost"
               type="text"
               value="4000"
-              class="w-full p-2 text-black rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              class="w-full p-2 text-teal-400 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400"
             />
           </div>
 
           <!-- Calculate Total Button -->
           <button
+            id="calculate-total-btn"
             class="w-full bg-blue-500 py-2 rounded text-white font-semibold mb-4"
           >
             Calculate Total
@@ -298,7 +305,9 @@
 
           <!-- Total -->
           <div class="text-right">
-            <span class="text-xl font-bold text-orange-500">Total: $11000</span>
+            <span class="text-xl font-bold text-teal-400"
+              >Total: $ <span id="total-cost">11000</span></span
+            >
           </div>
         </div>
       </div>

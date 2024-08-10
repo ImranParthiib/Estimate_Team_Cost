@@ -30,3 +30,30 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 });
+
+// Calculate Player Expenses
+document.getElementById("calculate-btn").addEventListener("click", function () {
+  const playerList = document.getElementById("player-list");
+  const totalPlayer = playerList.childElementCount;
+  const playerCost = document.getElementById("player-cost").value;
+  const totalPlayerExpense = totalPlayer * playerCost;
+  const playerExpense = document.getElementById("player-expense");
+  if (totalPlayer === 0) {
+    alert("Please select a player first!");
+  } else {
+    playerExpense.innerText = totalPlayerExpense;
+  }
+});
+
+// Calculate Total Expense of the Team
+document
+  .getElementById("calculate-total-btn")
+  .addEventListener("click", function () {
+    const playerCosts = document.getElementById("player-expense").innerText;
+    const managerCost = document.getElementById("manager-cost").value;
+    const coachCost = document.getElementById("coach-cost").value;
+    const totalTeamExpense =
+      parseInt(playerCosts) + parseInt(managerCost) + parseInt(coachCost);
+    console.log(totalTeamExpense);
+    document.getElementById("total-cost").innerText = totalTeamExpense;
+  });
