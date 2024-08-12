@@ -25,45 +25,52 @@
       class="bg-gray-800 text-white p-1 flex items-center justify-between"
     >
       <div class="flex items-center space-x-4">
-        <img src="./image/logo/logo.webp" alt="Logo" class="h-10 w-10" />
+        <img
+          src="./image/logo/logo.webp"
+          alt="Logo"
+          class="h-10 w-10 rounded-3xl"
+        />
         <h1 class="text-xl font-bold">Estimate Team Cost</h1>
       </div>
 
       <!-- Hamburger Icon for Mobile -->
-      <div class="md:hidden">
+      <div class="md:hidden ml-auto">
         <button id="menu-toggle" class="focus:outline-none">
           <i class="fas fa-bars text-2xl"></i>
         </button>
       </div>
 
-      <!-- Navigation Links -->
-      <nav
-        id="mobile-menu"
-        class="fixed inset-y-12 md:inset-y-0 left-0 bg-gray-800 text-white w-64 p-4 transform -translate-x-full transition-transform duration-300 md:relative md:translate-x-0 md:flex md:space-x-6"
-      >
-        <button id="close-menu" class="md:hidden mb-6 focus:outline-none">
-          <i class="fas fa-times text-2xl"></i>
+      <!-- Navigation Links and Get Started Button -->
+      <div class="flex items-center space-x-4">
+        <nav
+          id="mobile-menu"
+          class="fixed inset-y-12 md:inset-y-0 left-0 bg-gray-800 text-white p-4 transform -translate-x-full transition-transform duration-300 md:relative md:translate-x-0 md:flex md:space-x-8 lg:space-x-14"
+        >
+          <button id="close-menu" class="md:hidden mb-6 focus:outline-none">
+            <i class="fas fa-times text-2xl"></i>
+          </button>
+          <a href="#home" class="block hover:text-gray-300 mb-4 md:mb-0"
+            >Home</a
+          >
+          <a href="#about" class="block hover:text-gray-300 mb-4 md:mb-0"
+            >About</a
+          >
+          <a href="#services" class="block hover:text-gray-300 mb-4 md:mb-0"
+            >Services</a
+          >
+          <a href="#contact" class="block hover:text-gray-300 mb-4 md:mb-0"
+            >Contact</a
+          >
+        </nav>
+
+        <button
+          class="hidden md:block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+          onclick="scrollToSection('services')"
+        >
+          Get Started
         </button>
-        <a href="#home" class="block hover:text-gray-300 mb-4 md:mb-0">Home</a>
-        <a href="#about" class="block hover:text-gray-300 mb-4 md:mb-0"
-          >About</a
-        >
-        <a href="#services" class="block hover:text-gray-300 mb-4 md:mb-0"
-          >Services</a
-        >
-        <a href="#contact" class="block hover:text-gray-300 mb-4 md:mb-0"
-          >Contact</a
-        >
-      </nav>
-
-      <button
-        class="hidden md:block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
-        onclick="scrollToSection('services')"
-      >
-        Get Started
-      </button>
+      </div>
     </header>
-
     <!-- Banner Image -->
     <div>
       <img
