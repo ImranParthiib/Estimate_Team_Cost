@@ -1,36 +1,33 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const selectButtons = document.querySelectorAll("#select-btn");
+// Remove Player From Selection
+document.getElementById("remove-button").addEventListener("click", function () {
   const playerList = document.getElementById("player-list");
-
-  selectButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const playerName = this.parentElement.querySelector("h3").innerText;
-
-      if (playerList.childElementCount < 5) {
-        const listItem = document.createElement("li");
-        listItem.className = "py-2 border-b";
-        listItem.textContent = `${
-          playerList.childElementCount + 1
-        }. ${playerName}`;
-        playerList.appendChild(listItem);
-      } else {
-        alert("You can only select up to 5 players.");
-      }
-    });
-  });
-
-  document
-    .getElementById("remove-button")
-    .addEventListener("click", function () {
-      if (playerList.childElementCount > 0) {
-        playerList.removeChild(playerList.lastChild);
-        playerList.removeChild(playerList.lastChild);
-      } else {
-        alert("No player to remove!");
-      }
-    });
+  if (playerList.childElementCount > 0) {
+    playerList.removeChild(playerList.lastChild);
+    playerList.removeChild(playerList.lastChild);
+  } else {
+    alert("No player to remove!");
+  }
 });
 
+// Add Player to Selection
+const buttons = document.querySelectorAll("#select-btn");
+const playerList = document.getElementById("player-list");
+buttons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    const parentDiv = button.parentElement;
+    const h3Element = parentDiv.querySelector("h3");
+    if (playerList.childElementCount < 5) {
+      const listItem = document.createElement("li");
+      listItem.className = "py-2 border-b";
+      listItem.textContent = `${playerList.childElementCount + 1}. ${
+        h3Element.innerText
+      }`;
+      playerList.appendChild(listItem);
+    } else {
+      alert("You can only select up to 5 players. Remove First!");
+    }
+  });
+});
 // Calculate Player Expenses
 document.getElementById("calculate-btn").addEventListener("click", function () {
   const playerList = document.getElementById("player-list");
@@ -54,6 +51,5 @@ document
     const coachCost = document.getElementById("coach-cost").value;
     const totalTeamExpense =
       parseInt(playerCosts) + parseInt(managerCost) + parseInt(coachCost);
-    console.log(totalTeamExpense);
     document.getElementById("total-cost").innerText = totalTeamExpense;
   });
