@@ -1,3 +1,6 @@
 .h-custom {
   height: 70vh;
 }
+.bg-custom {
+  background-color: rgb(89 162 158 / 62%);
+}
