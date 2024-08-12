@@ -1,4 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Helper function to validate number input
+  function validateNumberInput(value, fieldName) {
+    if (isNaN(value) || value.trim() === "") {
+      alert(`Please enter a valid number for ${fieldName}`);
+      return false;
+    }
+    return true;
+  }
+
   // Remove Player From Selection
   document
     .getElementById("remove-button")
@@ -39,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const playerList = document.getElementById("player-list");
       const totalPlayer = playerList.childElementCount;
       const playerCost = document.getElementById("player-cost").value;
+      if (!validateNumberInput(playerCost, "Player Cost")) return;
       const totalPlayerExpense = totalPlayer * playerCost;
       const playerExpense = document.getElementById("player-expense");
       if (totalPlayer === 0) {
@@ -55,6 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const playerCosts = document.getElementById("player-expense").innerText;
       const managerCost = document.getElementById("manager-cost").value;
       const coachCost = document.getElementById("coach-cost").value;
+      if (
+        !validateNumberInput(managerCost, "Manager Cost") ||
+        !validateNumberInput(coachCost, "Coach Cost")
+      )
+        return;
       const totalTeamExpense =
         parseInt(playerCosts) + parseInt(managerCost) + parseInt(coachCost);
       document.getElementById("total-cost").innerText = totalTeamExpense;
