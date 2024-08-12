@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estimate Team Cost</title>
+    <!-- Tailwind CSS Link -->
+    <!-- Custom CSS Link -->
+    <!-- Favicon Link -->
+    <link
+      rel="shortcut icon"
+      href="/assets/logo-B5qKHJTO.webp"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome Link -->
+    <script
+      src="https://kit.fontawesome.com/3180a89ad8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B6OnN1B5.css">
+  </head>
+  <body>
+    <header
+      class="bg-gray-800 text-white p-1 flex items-center justify-between"
+    >
+      <div class="flex items-center space-x-4">
+        <img
+          src="/assets/logo-B5qKHJTO.webp"
+          alt="Logo"
+          class="h-10 w-10 rounded-3xl"
+        />
+        <h1 class="text-xl font-bold">Estimate Team Cost</h1>
+      </div>
+
+      <!-- Hamburger Icon for Mobile -->
+      <div class="md:hidden ml-auto">
+        <button id="menu-toggle" class="focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Links and Get Started Button -->
+      <div class="flex items-center space-x-4">
+        <nav
+          id="mobile-menu"
+          class="fixed inset-y-12 md:inset-y-0 left-0 bg-gray-800 text-white p-4 transform -translate-x-full transition-transform duration-300 md:relative md:translate-x-0 md:flex md:space-x-8 lg:space-x-14"
+        >
+          <button id="close-menu" class="md:hidden mb-6 focus:outline-none">
+            <i class="fas fa-times text-2xl"></i>
+          </button>
+          <a href="#home" class="block hover:text-gray-300 mb-4 md:mb-0"
+            >Home</a
+          >
+          <a href="#about" class="block hover:text-gray-300 mb-4 md:mb-0"
+            >About</a
+          >
+          <a href="#services" class="block hover:text-gray-300 mb-4 md:mb-0"
+            >Services</a
+          >
+          <a href="#contact" class="block hover:text-gray-300 mb-4 md:mb-0"
+            >Contact</a
+          >
+        </nav>
+
+        <button
+          class="hidden md:block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+          onclick="scrollToSection('services')"
+        >
+          Get Started
+        </button>
+      </div>
+    </header>
+    <!-- Banner Image -->
+    <div>
+      <img
+        class="h-custom w-full object-cover"
+        src="/assets/banner-cZmEheUl.webp"
+        alt="Banner Image"
+      />
+    </div>
+
+    <!-- Notification Section -->
+    <div
+      class="flex justify-center items-center px-8 md:px-14 bg-gradient-to-b from-cyan-500 to-blue-500 text-3xl h-32 shadow-lg"
+    >
+      <h1 class="text-center font-bold">
+        Select Five Players to Estimate the Cost
+      </h1>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex flex-col lg:flex-row px-8 md:px-14 bg-sky-950">
+      <!-- Player Selection -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 lg:w-3/4"
+      >
+        <!-- Card 1 -->
+        <div
+          class="border rounded-lg shadow-lg bg-slate-800 text-white border-slate-800"
+        >
+          <img
+            src="/assets/Travis%20Kelce-D5zR4TsF.jpg"
+            alt="Player Image"
+            class="rounded-t-lg w-full h-52 object-cover"
+          />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">Travis Kelce</h3>
+            <p class="text-sm">39 Game Played • 10 Tackles</p>
+            <button
+              id="select-btn"
+              class="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="border rounded-lg shadow-lg bg-slate-800 text-white border-slate-800"
+        >
+          <img
+            src="/assets/Nick%20Foles-zZ0B9LWt.jpg"
+            alt="Player Image"
+            class="rounded-t-lg w-full h-52 object-cover"
+          />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">Nick Foles</h3>
+            <p class="text-sm">36 Game Played • 101 Tackles</p>
+            <button
+              id="select-btn"
+              class="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="border rounded-lg shadow-lg bg-slate-800 text-white border-slate-800"
+        >
+          <img
+            src="/assets/Tee%20Higgins-Ddu6BvHU.jpg"
+            alt="Player Image"
+            class="rounded-t-lg w-full h-52 object-cover"
+          />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">Tee Higgins</h3>
+            <p class="text-sm">36 Game Played • 123 Tackles</p>
+            <button
+              id="select-btn"
+              class="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div
+          class="border rounded-lg shadow-lg bg-slate-800 text-white border-slate-800"
+        >
+          <img
+            src="/assets/Tom%20Brady-px5fKnrB.jpg"
+            alt="Player Image"
+            class="rounded-t-lg w-full h-52 object-cover"
+          />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">Tom Brady</h3>
+            <p class="text-sm">36 Game Played • 10 Tackles</p>
+            <button
+              id="select-btn"
+              class="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div
+          class="border rounded-lg shadow-lg bg-slate-800 text-white border-slate-800"
+        >
+          <img
+            src="/assets/Cassius%20Marsh-D7lXOYYJ.jpg"
+            alt="Player Image"
+            class="rounded-t-lg w-full h-52 object-cover"
+          />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">Cassius Marsh</h3>
+            <p class="text-sm">36 Game Played • 205 Tackles</p>
+            <button
+              id="select-btn"
+              class="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div
+          class="border rounded-lg shadow-lg bg-slate-800 text-white border-slate-800"
+        >
+          <img
+            src="/assets/Danny%20Amendola-lVwIaUbW.jpg"
+            alt="Player Image"
+            class="rounded-t-lg w-full h-52 object-cover"
+          />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">Danny Amendola</h3>
+            <p class="text-sm">36 Game Played • 109 Tackles</p>
+            <button
+              id="select-btn"
+              class="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <!-- Card 7 -->
+        <div
+          class="border rounded-lg shadow-lg bg-slate-800 text-white border-slate-800"
+        >
+          <img
+            src="/assets/Julian%20Edelman-DmeWz9r5.jpg"
+            alt="Player Image"
+            class="rounded-t-lg w-full h-52 object-cover"
+          />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">Julian Edelman</h3>
+            <p class="text-sm">39 Game Played • 10 Tackles</p>
+            <button
+              id="select-btn"
+              class="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <!-- Card 8 -->
+        <div
+          class="border rounded-lg shadow-lg bg-slate-800 text-white border-slate-800"
+        >
+          <img
+            src="/assets/Aaron%20Rodgers-iLjQjqft.jpg"
+            alt="Player Image"
+            class="rounded-t-lg w-full h-52 object-cover"
+          />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">Aaron Rodgers</h3>
+            <p class="text-sm">39 Game Played • 10 Tackles</p>
+            <button
+              id="select-btn"
+              class="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <!-- Card 9 -->
+        <div
+          class="border rounded-lg shadow-lg bg-slate-800 text-white border-slate-800"
+        >
+          <img
+            src="/assets/Russell%20Wilson-PIw7Gt2O.jpg"
+            alt="Player Image"
+            class="rounded-t-lg w-full h-52 object-cover"
+          />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">Russell Wilson</h3>
+            <p class="text-sm">39 Game Played • 10 Tackles</p>
+            <button
+              id="select-btn"
+              class="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <!-- Card 10 -->
+        <div
+          class="border rounded-lg shadow-lg bg-slate-800 text-white border-slate-800"
+        >
+          <img
+            src="/assets/Nick%20Bosa-BunVGktf.jpg"
+            alt="Player Image"
+            class="rounded-t-lg w-full h-52 object-cover"
+          />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">Nick Bosa</h3>
+            <p class="text-sm">39 Game Played • 10 Tackles</p>
+            <button
+              id="select-btn"
+              class="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <!-- Card 11 -->
+        <div
+          class="border rounded-lg shadow-lg bg-slate-800 text-white border-slate-800"
+        >
+          <img
+            src="/assets/Joe%20Flacco-B3c2qhWP.jpg"
+            alt="Player Image"
+            class="rounded-t-lg w-full h-52 object-cover"
+          />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">Joe Flacco</h3>
+            <p class="text-sm">39 Game Played • 10 Tackles</p>
+            <button
+              id="select-btn"
+              class="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <!-- Card 12 -->
+        <div
+          class="border rounded-lg shadow-lg bg-slate-800 text-white border-slate-800"
+        >
+          <img
+            src="/assets/Jason%20Verrett-DncIu7xh.jpg"
+            alt="Player Image"
+            class="rounded-t-lg w-full h-52 object-cover"
+          />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">Jason Verrett</h3>
+            <p class="text-sm">36 Game Played • 145 Tackles</p>
+            <button
+              id="select-btn"
+              class="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div
+        class="p-4 text-white lg:w-1/4 flex flex-col md:flex-row gap-4 lg:flex-col lg:block"
+      >
+        <!-- First Div -->
+        <div class="bg-gray-800 text-white p-6 rounded-lg w-full">
+          <h3 class="text-xl font-bold mb-4">Selected - V</h3>
+          <ul id="player-list" class="mb-4">
+            <li class="py-2 border-b">1. Lionel Messi</li>
+            <li class="py-2 border-b">2. Neymar Jr</li>
+            <li class="py-2 border-b">3. Kylian Mbappé</li>
+            <li class="py-2 border-b">4. Renato Sanches</li>
+            <li class="py-2 border-b">5. Keylor Navas</li>
+          </ul>
+          <button
+            id="remove-button"
+            class="bg-blue-500 text-white py-2 px-4 rounded"
+          >
+            Remove
+          </button>
+        </div>
+
+        <!-- Second Div with margin at the top -->
+        <div
+          class="bg-gray-800 text-white p-6 rounded-lg w-full lg:max-w-xs md:mt-0 lg:mt-8"
+        >
+          <h2 class="text-2xl font-bold mb-4">Budget</h2>
+
+          <!-- Per Player -->
+          <div class="mb-4">
+            <label class="block text-sm font-semibold mb-2">Per Player</label>
+            <input
+              id="player-cost"
+              type="text"
+              value="1000"
+              class="w-full p-2 text-teal-400 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400"
+            />
+          </div>
+
+          <!-- Calculate Button -->
+          <button
+            id="calculate-btn"
+            class="w-full bg-blue-500 py-2 rounded text-white font-semibold mb-4"
+          >
+            Calculate
+          </button>
+
+          <!-- Player Expenses -->
+          <div class="mb-4">
+            <label class="block text-sm font-semibold mb-2"
+              >Player Expenses</label
+            >
+            <span class="text-lg text-teal-400"
+              >$ <span id="player-expense">5000</span></span
+            >
+          </div>
+
+          <!-- Manager -->
+          <div class="mb-4">
+            <label class="block text-sm font-semibold mb-2">Manager</label>
+            <input
+              id="manager-cost"
+              type="text"
+              value="2000"
+              class="w-full p-2 text-teal-400 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400"
+            />
+          </div>
+
+          <!-- Coach -->
+          <div class="mb-4">
+            <label class="block text-sm font-semibold mb-2">Coach</label>
+            <input
+              id="coach-cost"
+              type="text"
+              value="4000"
+              class="w-full p-2 text-teal-400 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400"
+            />
+          </div>
+
+          <!-- Calculate Total Button -->
+          <button
+            id="calculate-total-btn"
+            class="w-full bg-blue-500 py-2 rounded text-white font-semibold mb-4"
+          >
+            Calculate Total
+          </button>
+
+          <!-- Total -->
+          <div class="text-right">
+            <span class="text-xl font-bold text-teal-400"
+              >Total: $ <span id="total-cost">11000</span></span
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <hr />
+    <footer>
+      <div class="bg-slate-800">
+        <p class="text-center text-gray-100 p-4">
+          &copy; 2024 Estimate Team Cost. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Js Script -->
+    <script src="./js/script.js"></script>
+    <script src="./js/header.js"></script>
+  </body>
+</html>
